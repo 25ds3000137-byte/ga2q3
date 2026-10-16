@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: cors-metrics-api
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: STUDENT_EMAIL
+        value: 25ds3000137@ds.study.iitm.ac.in
